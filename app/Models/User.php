@@ -45,4 +45,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function feedback() { return $this->hasMany(Feedback::class); }
+    public function comments() { return $this->hasMany(Comment::class); }
+    public function mentionsReceived() {
+        return $this->belongsToMany(Comment::class, 'comment_mentions', 'mentioned_user_id', 'comment_id');
+    }
 }
