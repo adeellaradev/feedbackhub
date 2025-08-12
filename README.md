@@ -56,7 +56,7 @@ php artisan key:generate
 ### 6️⃣ Run migrations & seeders
 
 ```bash
-php artisan migrate:fresh --seed
+php artisan migrate --seed
 ```
 
 ### 7️⃣ Compile assets
